@@ -1,0 +1,2 @@
+# Login_Register
+采用Java+Html+CSS+JavaScript+JSP+Ajax等知识编写的一个动态图片验证码登录和手机验证码注册结合数据库的登录注册平台
