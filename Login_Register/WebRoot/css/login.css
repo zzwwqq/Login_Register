@@ -1,0 +1,348 @@
+body {
+	/*整个登录界面背景图*/
+	background: url(../images/bg1.jpg) no-repeat;
+	/*设置图片占满整个屏幕：第一个值设置宽度，第二个值设置高度。
+	*/
+	/*background-size:100% 100%; */
+	/*把背景图像扩展至足够大，以使背景图像完全覆盖背景区域。
+                    背景图像的某些部分也许无法显示在背景定位区域中。
+	*/
+	/*background-size是css3中新增的属性，background-size的cover特定值会保持图像本身的宽高比例，将图片缩放到正好完全覆盖定义背景的区域。*/
+	background-size: cover;
+}
+
+h1 {
+	/*font-family的原则,假如客户终端不认识前面的字体,就自动切换到第二种字体,第二种不认识就切换到第三种,以此类推.假如都不能识别就调用默认字体 
+	Arial,’Times New Roman’这两种字体不认识中文,只认识英文
+    Serif字体中字符在行的末端拥有额外的装饰,有衬线
+	em会相对于当前元素的字体大小来计算
+	1em = 1font-size
+	padding-top       设置上内边距
+	font-weight: 400; 设置字体粗细，400 等同于 normal，而 700 等同于 bold。                                  
+	                               normal	是默认值。定义标准的字符。
+	                               bold	定义粗体字符。
+                                   bolder	定义更粗的字符。
+                                   lighter	定义更细的字符。
+	*/
+	font-family: "Times New Roman", Times, serif;
+	text-align: center;
+	font-size: 2em;
+	padding-top: 3em;
+	/*font-weight: bold;*/
+	font-weight: 400;
+	color: #2B2B36;
+}
+
+/*登录表单*/
+.login-form {
+	/*
+	position: relative;相对定位
+	1.相对定位元素相对于其自身在文档流中的位置来定位
+	2.开启元素的相对定位后，如果不设置偏移量元素不会发生任何变化
+	3.相对定位的元素不会脱离文档流，原来的位置仍然占据着
+	
+	background: #2b2b36;设置整个表单的背景色
+	
+	
+	（一般情况，开启了子元素的绝对定位都会同时开启父元素的相对定位），这样开启绝对定位的子元素是相对于开启定位的父元素来定位的
+	此处login-form类标记的div元素是父元素
+	子元素是close类标记的div     等等
+	
+	width: 30%;整个表单宽度
+	
+	
+	
+	margin: 3% auto 0 auto;四个参数分别对应上右下左（顺时针走一圈）       如果为三个参数：分别对应上 左右 下（左右连在一起），  如果为两个参数：分别对应上下左右（左右连在一起）
+	如果同时将左右外边距设置为auto，则会将左右外边距设置为一个相等的值，通过这种方式使一个子元素在它的父元素中水平居中
+	
+    border-radius: 15px;  设置上下左右圆角半径
+	
+	*/
+	background-color: #2b2b36;
+	position: relative;
+	width: 30%;
+	margin: 1% auto 0;
+	border-radius: 10px;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-o-border-radius: 15px;
+}
+
+/*设置表单第一部分，左上角的叉型图像*/
+.close {
+	background: url("../images/close.png") no-repeat;
+	/*绝对定位；
+  1.绝对定位的元素会完全脱离文档流，原来的位置会丢掉，其他元素可以移动到哪那里
+  2.元素设置绝对定位以后，如果不设置偏移量，元素的位置不会发生变化 
+  
+   left: 20px;   设置偏移量，因为其父元素开启了定位，而该元素设置的是绝对定位，绝对定位的元素是相对于距离他最近的开启了定位的祖先元素进行定位
+   top: 20px;
+  */
+	border: 0;
+	outline: 0;
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	left: 20px;
+	top: 20px;
+	-webkit-transition: color 0.2s ease-in-out;
+	-moz-transition: color 0.2s ease-in-out;
+	-o-transition: color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out;
+	-webkit-transition: color 0.2s ease-in-out;
+	*/
+	/*ease-in-out	规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。*/
+}
+
+.clo {
+	background: url("../images/pass.png") no-repeat;
+	/*绝对定位；
+  1.绝对定位的元素会完全脱离文档流，原来的位置会丢掉，其他元素可以移动到哪那里
+  2.元素设置绝对定位以后，如果不设置偏移量，元素的位置不会发生变化 
+  
+   left: 20px;   设置偏移量，因为其父元素开启了定位，而该元素设置的是绝对定位，绝对定位的元素是相对于距离他最近的开启了定位的祖先元素进行定位
+   top: 20px;
+  */
+	border: 0;
+	outline: 0;
+	position: absolute;
+	width: 21px;
+	height: 21px;
+	right: 35px;
+	top: 310px;
+	-webkit-transition: color 0.2s ease-in-out;
+	-moz-transition: color 0.2s ease-in-out;
+	-o-transition: color 0.2s ease-in-out;
+	transition: color 0.2s ease-in-out;
+	-webkit-transition: color 0.2s ease-in-out;
+	*/
+	/*ease-in-out	规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。*/
+}
+
+}
+
+/*
+clear可以用来清除其他浮动元素对当前元素的影响
+both，清除两侧浮动元素对当前元素的影响，清除对他影响最大的那个元素的浮动
+ */
+.clear {
+	clear: both;
+}
+
+/*
+易错点： 1 类选择器前面的点应该是英文的点，而不是中文（.avtar img而不是。avtar） ;两者差别特别小，这要特别注意
+      2 margin:2em auto 0em;属性值之间不要写逗号，而应该是空格，  这点也要特别注意
+     
+     
+      input   img  i  a  等标签是 行内元素 （内联元素）
+                他们不能像div这样的 块级元素占一行
+                所以必须用display属性将内联元素转换为块元素，再使用margin
+     
+*/
+/*设置第二个区域的图像*/
+.avtar img {
+	display: block;
+	margin: 2em auto 0;
+}
+
+/*设置表单第一部分的背景等属性*/
+.head-info {
+	/*
+	 background: #23232e;设置的是表单上第一部分背景色，深一些的黑色
+	-webkit-border-top-left-radius: 10px;   兼容谷歌浏览器
+	*/
+	padding: 5px 0;
+	background-color: #23232e;
+	height: 50px;
+	border-radius: 10px;
+}
+
+/*设置表单第一部分的三种颜色的点
+  display: block;display是设置元素的显示类型,元素会作为块元素显示
+  border-radius: 50%;CSS属性 border-radius 用来设置边框圆角。当使用一个半径时确定一个圆形；当使用两个半径时确定一个椭圆，这个(椭)圆与边框的交集形成圆角效果。
+*/
+label.lbl1 {
+	background: #6756ea;
+	width: 20px;
+	height: 20px;
+	display: block;
+	float: right;
+	border-radius: 50%;
+	margin: 16px 10px 0px 0px;
+}
+
+label.lbl2 {
+	background: #ea569a;
+	width: 20px;
+	height: 20px;
+	display: block;
+	float: right;
+	border-radius: 50%;
+	margin: 16px 10px 0px 0px;
+}
+
+label.lbl3 {
+	background: #f1c85f;
+	width: 20px;
+	height: 20px;
+	display: block;
+	float: right;
+	border-radius: 50%;
+	margin: 16px 10px 0px 0px;
+}
+
+/*
+  background: url(../images/adm.png) 设置背景图，
+  no-repeat  不重复
+  25px 23px    设置图片显示的位置
+  
+  
+  outline:none; 清除轮廓样式
+  font-weight: 100;字体粗细
+  border:none; 去除边框
+  outline:none; 清除轮廓样式
+*/
+.text {
+	background: url(../images/adm.png) no-repeat 25px 23px;
+	width: 100%;
+	padding: 1em 3em 1em 3em;
+	color: #9199aa;
+	font-size: 22px;
+	border: none;
+	outline: none;
+	font-weight: 100;
+	border-bottom: 1.2px solid #484856;
+	margin-top: 2em;
+}
+
+.key {
+	background: url(../images/key.png) no-repeat 25px 30px;
+	width: 100%;
+	padding: 1em 3em 1em 3em;
+	color: #dd3e3e;
+	font-size: 22px;
+	outline: none;
+	border: none;
+	font-weight: 100;
+	border-bottom: 1.2px solid #484856;
+	margin-bottom: 0em;
+}
+
+.registerlabel {
+	font-size: 15px;
+	font-weight: 100;
+	color: #9199aa;
+}
+
+.verify {
+	background: url(../images/bulb_dim.JPG) no-repeat 25px 20px;
+	background-color: #2b2b36;
+	width: 50%;
+	padding: 0.5em 3em 0.5em 3em;
+	color: #dd3e3e;
+	font-size: 22px;
+	outline: none;
+	border: none;
+	font-weight: 100;
+	margin-bottom: 0em;
+}
+
+.hereregister {
+	font: italic bold 18px 华文行楷, sans-serif;
+	color: green;
+}
+
+.hereregister1 {
+	font: italic bold 18px 华文行楷, sans-serif;
+	color: yellowgreen;
+}
+
+.hereregister .hereregister1:hover {
+	color: yellow;
+}
+
+.fondpassword {
+	font: italic bold 18px 华文行楷, sans-serif;
+	color: yellowgreen;
+}
+
+.fondpassword:hover {
+	color: yellow;
+}
+
+a {
+	text-decoration: none;
+}
+
+.signin {
+	font: 25px STXingkai;
+	color: white;
+	outline: none;
+	border: none;
+	background: #3ea751;
+	width: 50%;
+	padding: 18px 5px;
+	border-bottom-left-radius: 15px;
+	cursor: pointer;
+}
+
+.reset {
+	font: 25px STXingkai;
+	color: white;
+	outline: none;
+	border: none;
+	background: #3ea751;
+	width: 50%;
+	padding: 18px 5px;
+	border-bottom-right-radius: 15px;
+	cursor: pointer;
+}
+
+.signin:hover {
+	background-color: #0cd653;
+	transition: 1s all;
+}
+
+.reset:hover {
+	background-color: #0cd653;
+	transition: 1s all;
+}
+
+.copy-rights {
+	padding-top: 10px;
+}
+
+/*版权信息中段落样式*/
+.copy-rights p {
+	color: yellowgreen;
+	font-family: 'Exo 2', sans-serif;
+	font-size: 1em;
+	text-align: center;
+}
+
+/*
+CSS伪类是用来添加一些选择器的特殊效果。
+a:link       未访问的链接 
+a:visited    已访问的链接
+a:hover      鼠标划过链接
+a:active     已选中的链接
+*/
+.copy-rights p a:link {
+	color: green;
+}
+
+.copy-rights p a:visited {
+	color: red;
+}
+
+.copy-rights p a:hover {
+	color: yellow;
+}
+
+.copy-rights p a:active {
+	color: orange;
+}
+
+.copy-rights p a {
+	text-decoration: none;
+}
